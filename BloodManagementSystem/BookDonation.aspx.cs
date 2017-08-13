@@ -19,49 +19,68 @@ namespace BloodManagementSystem
 
             String strSelect = "Select donationDate from Donation where donorID = @donorID ORDER BY donationDate DESC, donationTime DESC";
 
-
             SqlCommand cmdSelect = new SqlCommand(strSelect, conn);
 
-            // get from session
-            cmdSelect.Parameters.AddWithValue("@donorID", "3001");
-
-
+            // Get donorID from current login
+            int donorID = int.Parse(Session["donorID"].ToString());
+            cmdSelect.Parameters.AddWithValue("@donorID", donorID);
+            
             SqlDataReader dtrProduct = cmdSelect.ExecuteReader();
             lblLastDonation.Text = "NA";
-            lblEligibleDon.Text = "NA";
+            lblEligibleDon.Text = DateTime.Now.Date.AddDays(1.0).ToString("dd/MM/yyyy");
 
+            rgvDate.MinimumValue = DateTime.Now.Date.AddDays(1.0).ToString("d");
+            //Check if donor has donated before
             if (dtrProduct.HasRows)
             {
                 dtrProduct.Read();
                 DateTime lastDonation = dtrProduct.GetDateTime(0);
 
                 lblLastDonation.Text = lastDonation.ToString("dd/MM/yyyy");
+                
+                if (lastDonation <= DateTime.Now)
+                {
+                    int diffLast = DateTime.Now.Day - lastDonation.Day;
+                    DateTime eligibleDonation = DateTime.Now.Date.AddDays(100 - diffLast);
 
-
-
-                int diffLast = DateTime.Now.Day - lastDonation.Day;
-                DateTime eligibleDonation = DateTime.Now.Date.AddDays(100 - diffLast);
-
-                if (diffLast < 100) {
-
-                    rgvDate.MinimumValue = eligibleDonation.ToString("d");
-                    lblEligibleDon.Text = eligibleDonation.ToString("dd/MM/yyyy");
-                    lblEligibleDon.Visible = true;
-
-
+                    if (diffLast < 100)
+                    {
+                        rgvDate.MinimumValue = eligibleDonation.Date.ToString("d");
+                        lblEligibleDon.Text = eligibleDonation.ToString("dd/MM/yyyy");
+                        lblEligibleDon.Visible = true;
+                        
+                    }
+                    else
+                    {
+                        rgvDate.MinimumValue = DateTime.Now.Date.AddDays(1.0).ToString("d");
+                    }
                 }
                 else
-                {
-                    rgvDate.MinimumValue = DateTime.Now.Date.AddDays(1.0).ToString("d");
+                {                    
+                    //If the donor has already booked a donation for the future
+
+                    lblEligibleDon.Text = lastDonation.ToString("dd/MM/yyyy");
+                    lblNot.Text = "You already have an upcoming donation booked on "+ lblEligibleDon.Text+".";
+                    dtrProduct.Read();
+                    lblLastDonation.Text = dtrProduct.GetDateTime(0).ToString("dd/MM/yyyy");
+                    tbDate.Enabled = false;
+                    ddlHours.Enabled = false;
+                    ddlMinutes.Enabled = false;
+                    btnBook.Visible = false;
+                    lblNot.Visible = true;
+                    HyperLink2.Visible = true;
+                    
                 }
             }
             else
             {
                 rgvDate.MinimumValue = DateTime.Now.Date.AddDays(1.0).ToString("d");
             }
+
             dtrProduct.Close();
             conn.Close();
 
+            
             rgvDate.MaximumValue = DateTime.Now.Date.AddDays(100.0).ToString("d");
            
         }
@@ -76,9 +95,6 @@ namespace BloodManagementSystem
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }

@@ -20,8 +20,37 @@
     <div>
     
         <h1>Donation History</h1>
+        <h3>
+            Upcoming Donation Booking</h3>
         <p>
-            <div class="auto-style2" title="Donation History">
+            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" Height="50px" Width="294px">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
+                <EditRowStyle BackColor="#999999" />
+                <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
+                <Fields>
+                    <asp:BoundField DataField="donationTime" DataFormatString="{0:t}" HeaderText="Time" SortExpression="donationTime" />
+                    <asp:BoundField DataField="donationDate" DataFormatString="{0:d}" HeaderText="Date" SortExpression="donationDate" />
+                    <asp:BoundField DataField="venue" HeaderText="Venue" SortExpression="venue" />
+                    <asp:BoundField DataField="staffName" HeaderText="Nurse In Charge" SortExpression="staffName" />
+                </Fields>
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            </asp:DetailsView>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT        Donation.donationTime, Donation.donationDate, Donation.venue, Staff.staffName
+FROM            Donation INNER JOIN
+                         Staff ON Donation.staffID = Staff.staffID
+WHERE donationDate &gt; GETDATE()
+AND donorID = @donorID">
+                <SelectParameters>
+                    <asp:SessionParameter DbType="Int32" Name="donorID" SessionField="donorID" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+        <h3>
+            Past Donations</h3>
+        <div class="auto-style2" title="Donation History">
                 <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" CssClass="auto-style1" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="431px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
@@ -31,6 +60,9 @@
                         <asp:BoundField DataField="unitOfBlood" HeaderText="Units Donated" SortExpression="unitOfBlood" />
                     </Columns>
                     <EditRowStyle BackColor="#999999" />
+                    <EmptyDataTemplate>
+                        No Past Donations Found
+                    </EmptyDataTemplate>
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
@@ -47,12 +79,9 @@
                     <asp:SessionParameter DefaultValue="3002" Name="donorID" SessionField="donorID" />
                 </SelectParameters>
             </asp:SqlDataSource>
-        </p>
         <p>
-            <asp:Button ID="Button1" runat="server" Text="Back" />
+            <asp:Button ID="Button1" runat="server" Text="Back To Menu" PostBackUrl="~/DonationMenu.aspx" />
         </p>
-        <p>
-            &nbsp;</p>
     
     </div>
     </form>

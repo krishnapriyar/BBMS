@@ -98,6 +98,8 @@
       <DependentUpon>Blood.mdf</DependentUpon>
     </Content>
     <Content Include="DonationHistory.aspx" />
+    <Content Include="DonationMenu.aspx" />
+    <Content Include="DonorID.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -141,6 +143,13 @@
     <Compile Include="DonationHistory.aspx.designer.cs">
       <DependentUpon>DonationHistory.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DonationMenu.aspx.cs">
+      <DependentUpon>DonationMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonationMenu.aspx.designer.cs">
+      <DependentUpon>DonationMenu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DonationSummary.aspx.cs">
       <DependentUpon>DonationSummary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -148,10 +157,20 @@
     <Compile Include="DonationSummary.aspx.designer.cs">
       <DependentUpon>DonationSummary.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DonorID.aspx.cs">
+      <DependentUpon>DonorID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonorID.aspx.designer.cs">
+      <DependentUpon>DonorID.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Image\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

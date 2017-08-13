@@ -45,8 +45,11 @@
             </tr>
             <tr>
                 <td class="auto-style20" title="Confirm Donation Time">
-            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource1" Height="50px" Width="313px" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" CssClass="auto-style23">
-                <EditRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource1" Height="50px" Width="313px" CellPadding="4" CssClass="auto-style23" ForeColor="#333333" GridLines="None">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
+                <EditRowStyle BackColor="#999999" />
+                <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
                 <Fields>
                     <asp:BoundField DataField="donorName" HeaderText="Name" SortExpression="donorName" />
                     <asp:BoundField DataField="donorIC" HeaderText="IC no" SortExpression="donorIC" />
@@ -54,10 +57,10 @@
                     <asp:BoundField DataField="bloodType" HeaderText="Blood Type" SortExpression="bloodType" />
                     <asp:BoundField DataField="donorEmail" HeaderText="Email" SortExpression="donorEmail" />
                 </Fields>
-                <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
-                <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
-                <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
-                <RowStyle BackColor="White" ForeColor="#003399" />
+                <FooterStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
             </asp:DetailsView>
                     <br />
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [donorName], [donorIC], [donorContact], [bloodType], [donorEmail] FROM [Donor] WHERE ([donorID] = @donorID)">
@@ -116,7 +119,7 @@
         <p>
             <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" PostBackUrl="~/BookDonation.aspx" Text="Back" />
 &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnConfirm" runat="server" Text="Confirm" />
+            <asp:Button ID="btnConfirm" runat="server" Text="Confirm" OnClick="btnConfirm_Click" />
         </p>
     
     </div>
