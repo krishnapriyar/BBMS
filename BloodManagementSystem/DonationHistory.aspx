@@ -80,7 +80,7 @@ AND donorID = @donorID">
                 </SelectParameters>
             </asp:SqlDataSource>
         <p>
-            <asp:Button ID="Button1" runat="server" Text="Back To Menu" PostBackUrl="~/DonationMenu.aspx" />
+            <asp:Button ID="Button1" runat="server" style="margin-left: 51px; text-align: left; border-radius: 8px; padding: 12px 28px; font-weight: bold" Text="Back To Menu" PostBackUrl="~/DonationMenu.aspx" Height="42px" Width="151px" />
         </p>
     
     </div>

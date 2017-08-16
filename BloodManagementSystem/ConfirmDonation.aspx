@@ -117,9 +117,9 @@
             </tr>
             </table>
         <p>
-            <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" PostBackUrl="~/BookDonation.aspx" Text="Back" />
+            <asp:Button ID="btnBack" runat="server" style="margin-left: 51px; text-align: left; border-radius: 8px; padding: 12px 28px; font-weight: bold" OnClick="btnBack_Click" PostBackUrl="~/BookDonation.aspx" Text="Back" Height="43px" Width="96px" />
 &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnConfirm" runat="server" Text="Confirm" OnClick="btnConfirm_Click" />
+            <asp:Button ID="btnConfirm" style="margin-left: 51px; text-align: left; border-radius: 8px; padding: 12px 28px; font-weight: bold" runat="server" Text="Confirm" OnClick="btnConfirm_Click" Height="43px" Width="110px" />
         </p>
     
     </div>

@@ -21,16 +21,16 @@
         <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
             <asp:ListItem Value="1">Jan</asp:ListItem>
             <asp:ListItem Value="2">Feb</asp:ListItem>
-            <asp:ListItem>4</asp:ListItem>
-            <asp:ListItem>3</asp:ListItem>
-            <asp:ListItem>5</asp:ListItem>
-            <asp:ListItem>6</asp:ListItem>
-            <asp:ListItem>7</asp:ListItem>
-            <asp:ListItem>8</asp:ListItem>
-            <asp:ListItem>9</asp:ListItem>
-            <asp:ListItem>10</asp:ListItem>
-            <asp:ListItem>11</asp:ListItem>
-            <asp:ListItem>12</asp:ListItem>
+            <asp:ListItem>March</asp:ListItem>
+            <asp:ListItem>April</asp:ListItem>
+            <asp:ListItem>May</asp:ListItem>
+            <asp:ListItem>June</asp:ListItem>
+            <asp:ListItem>July</asp:ListItem>
+            <asp:ListItem>August</asp:ListItem>
+            <asp:ListItem>September</asp:ListItem>
+            <asp:ListItem>October</asp:ListItem>
+            <asp:ListItem>November</asp:ListItem>
+            <asp:ListItem>December</asp:ListItem>
         </asp:DropDownList>
 &nbsp;
         <asp:Button ID="btnGen" runat="server" OnClick="btnGen_Click" Text="Generate Report" />

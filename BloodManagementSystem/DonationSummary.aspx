@@ -40,9 +40,9 @@ WHERE donationID = @donationID">
         </asp:SqlDataSource>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Back To Menu" />
+        <asp:Button ID="Button1" runat="server" style="margin-left: 51px; text-align: left; border-radius: 8px; padding: 12px 28px; font-weight: bold" Text="Back To Menu" Height="42px" Width="166px" />
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" PostBackUrl="~/DonationHistory.aspx" Text="View Donation History" />
+        <asp:Button ID="Button2" runat="server" style="margin-left: 51px; text-align: left; border-radius: 8px; padding: 12px 28px; font-weight: bold" PostBackUrl="~/DonationHistory.aspx" Text="View Donation History" Height="43px" Width="204px" />
         <br />
     
     </div>

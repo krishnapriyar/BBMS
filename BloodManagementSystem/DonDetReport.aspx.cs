@@ -15,7 +15,7 @@ namespace BloodManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void ObjectDataSource1_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)

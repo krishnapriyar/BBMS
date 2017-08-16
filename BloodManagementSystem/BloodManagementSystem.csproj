@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=17.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -81,31 +85,31 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.802.134\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.717.117\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.802.134\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.717.117\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.802.134\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.717.117\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.802.134\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.717.117\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.802.134\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.717.117\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.802.134\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.717.117\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.802.134\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.717.117\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -133,10 +137,22 @@
     <Content Include="App_Data\Blood_log.ldf">
       <DependentUpon>Blood.mdf</DependentUpon>
     </Content>
+    <Content Include="BloodManagement.aspx" />
     <Content Include="CBLReport.aspx" />
     <Content Include="DonationHistory.aspx" />
     <Content Include="DonationMenu.aspx" />
     <Content Include="DonorID.aspx" />
+    <Content Include="FM\Login.aspx" />
+    <Content Include="FM\Register.aspx" />
+    <Content Include="KF\CreateRecord.aspx" />
+    <Content Include="KF\CreditCard.aspx" />
+    <Content Include="KF\PaymentInformation.aspx" />
+    <Content Include="KF\PaymentTransaction.aspx" />
+    <Content Include="KF\Receipt.aspx" />
+    <Content Include="KF\SearchStaffRecord.aspx" />
+    <Content Include="KF\StaffMaintainance.aspx" />
+    <Content Include="KF\UpdateRecord.aspx" />
+    <Content Include="KF\ViewStaffRecord.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -145,6 +161,15 @@
     <Content Include="Datasets\DonDS.xsc">
       <DependentUpon>DonDS.xsd</DependentUpon>
     </Content>
+    <Content Include="PurSumReport.aspx" />
+    <Content Include="San\AssignNurse.aspx" />
+    <Content Include="San\BloodSupplyAlert.aspx" />
+    <Content Include="San\BloodUsageHistory.aspx" />
+    <Content Include="San\Booking.aspx" />
+    <Content Include="San\BookingOverview.aspx" />
+    <Content Include="San\BookingSummary.aspx" />
+    <Content Include="San\ConfirmPurchase.aspx" />
+    <Content Include="BookingSummary1.aspx" />
     <None Include="Datasets\DonDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DonDS.Designer.cs</LastGenOutput>
@@ -163,6 +188,17 @@
     </None>
     <Content Include="LBDS.xss">
       <DependentUpon>LBDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="PSDS.xsc">
+      <DependentUpon>PSDS.xsd</DependentUpon>
+    </Content>
+    <None Include="PSDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PSDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="PSDS.xss">
+      <DependentUpon>PSDS.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -195,6 +231,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloodManagement.aspx.cs">
+      <DependentUpon>BloodManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BloodManagement.aspx.designer.cs">
+      <DependentUpon>BloodManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BookDonation.aspx.cs">
       <DependentUpon>BookDonation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -249,8 +292,85 @@
     <Compile Include="DonorID.aspx.designer.cs">
       <DependentUpon>DonorID.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FM\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FM\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FM\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FM\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="KF\CreateRecord.aspx.cs">
+      <DependentUpon>CreateRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KF\CreateRecord.aspx.designer.cs">
+      <DependentUpon>CreateRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KF\CreditCard.aspx.cs">
+      <DependentUpon>CreditCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KF\CreditCard.aspx.designer.cs">
+      <DependentUpon>CreditCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KF\PaymentInformation.aspx.cs">
+      <DependentUpon>PaymentInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KF\PaymentInformation.aspx.designer.cs">
+      <DependentUpon>PaymentInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KF\PaymentTransaction.aspx.cs">
+      <DependentUpon>PaymentTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KF\PaymentTransaction.aspx.designer.cs">
+      <DependentUpon>PaymentTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KF\Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KF\Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KF\SearchStaffRecord.aspx.cs">
+      <DependentUpon>SearchStaffRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KF\SearchStaffRecord.aspx.designer.cs">
+      <DependentUpon>SearchStaffRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KF\StaffMaintainance.aspx.cs">
+      <DependentUpon>StaffMaintainance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KF\StaffMaintainance.aspx.designer.cs">
+      <DependentUpon>StaffMaintainance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KF\UpdateRecord.aspx.cs">
+      <DependentUpon>UpdateRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KF\UpdateRecord.aspx.designer.cs">
+      <DependentUpon>UpdateRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KF\ViewStaffRecord.aspx.cs">
+      <DependentUpon>ViewStaffRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KF\ViewStaffRecord.aspx.designer.cs">
+      <DependentUpon>ViewStaffRecord.aspx</DependentUpon>
     </Compile>
     <Compile Include="LBDS.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -258,6 +378,67 @@
       <DependentUpon>LBDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PSDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PurSumReport.aspx.cs">
+      <DependentUpon>PurSumReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurSumReport.aspx.designer.cs">
+      <DependentUpon>PurSumReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="San\AssignNurse.aspx.cs">
+      <DependentUpon>AssignNurse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="San\AssignNurse.aspx.designer.cs">
+      <DependentUpon>AssignNurse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="San\BloodSupplyAlert.aspx.cs">
+      <DependentUpon>BloodSupplyAlert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="San\BloodSupplyAlert.aspx.designer.cs">
+      <DependentUpon>BloodSupplyAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="San\BloodUsageHistory.aspx.cs">
+      <DependentUpon>BloodUsageHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="San\BloodUsageHistory.aspx.designer.cs">
+      <DependentUpon>BloodUsageHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="San\Booking.aspx.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="San\Booking.aspx.designer.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="San\BookingOverview.aspx.cs">
+      <DependentUpon>BookingOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="San\BookingOverview.aspx.designer.cs">
+      <DependentUpon>BookingOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="San\BookingSummary.aspx.cs">
+      <DependentUpon>BookingSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="San\BookingSummary.aspx.designer.cs">
+      <DependentUpon>BookingSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="San\ConfirmPurchase.aspx.cs">
+      <DependentUpon>ConfirmPurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="San\ConfirmPurchase.aspx.designer.cs">
+      <DependentUpon>ConfirmPurchase.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="DonDetReport.aspx.cs">
       <DependentUpon>DonDetReport.aspx</DependentUpon>
@@ -265,6 +446,13 @@
     </Compile>
     <Compile Include="DonDetReport.aspx.designer.cs">
       <DependentUpon>DonDetReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookingSummary1.aspx.cs">
+      <DependentUpon>BookingSummary1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingSummary1.aspx.designer.cs">
+      <DependentUpon>BookingSummary1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

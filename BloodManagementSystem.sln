@@ -5,11 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodManagementSystem", "BloodManagementSystem\BloodManagementSystem.csproj", "{2F923F74-4C27-4AEF-84C6-765988B0E210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingModule", "..\BookingModule\BookingModule\BookingModule.csproj", "{D56F527D-F15D-4869-ACBA-8AB6168872B8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment", "..\Assignment\Assignment\Assignment.csproj", "{D258EB18-2908-442A-99EC-8B6F9BF4174C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodManagement", "..\BloodManagement\BloodManagement\BloodManagement.csproj", "{F47FAC59-EF4F-4E2A-8550-781DB4E95A60}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8612740B-E7CA-4F2D-ADA7-8AB4C2015384}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +17,6 @@ Global
 		{2F923F74-4C27-4AEF-84C6-765988B0E210}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F923F74-4C27-4AEF-84C6-765988B0E210}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F923F74-4C27-4AEF-84C6-765988B0E210}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D56F527D-F15D-4869-ACBA-8AB6168872B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D56F527D-F15D-4869-ACBA-8AB6168872B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D56F527D-F15D-4869-ACBA-8AB6168872B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D56F527D-F15D-4869-ACBA-8AB6168872B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D258EB18-2908-442A-99EC-8B6F9BF4174C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D258EB18-2908-442A-99EC-8B6F9BF4174C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D258EB18-2908-442A-99EC-8B6F9BF4174C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D258EB18-2908-442A-99EC-8B6F9BF4174C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F47FAC59-EF4F-4E2A-8550-781DB4E95A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F47FAC59-EF4F-4E2A-8550-781DB4E95A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F47FAC59-EF4F-4E2A-8550-781DB4E95A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F47FAC59-EF4F-4E2A-8550-781DB4E95A60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

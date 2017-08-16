@@ -166,9 +166,9 @@
             </tr>
         </table>
         <br />
-            <asp:Button ID="btnBack" runat="server" EnableViewState="False" Text="Back to Menu" PostBackUrl="~/DonationMenu.aspx" />
+            <asp:Button ID="btnBack" runat="server" style="margin-left: 51px; text-align: left; border-radius: 8px; padding: 12px 28px; font-weight: bold" EnableViewState="False" Text="Back to Menu" PostBackUrl="~/DonationMenu.aspx" Height="43px" Width="146px" />
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnBook" runat="server" Text="Book" PostBackUrl="~/ConfirmDonation.aspx" ValidationGroup="AddEvent" />
+        <asp:Button ID="btnBook" runat="server" style="margin-left: 51px; text-align: left; border-radius: 8px; padding: 12px 28px; font-weight: bold" Text="Book" PostBackUrl="~/ConfirmDonation.aspx" ValidationGroup="AddEvent" Height="41px" Width="92px" />
         <br />
         <br />
     
